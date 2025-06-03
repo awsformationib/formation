@@ -10,7 +10,7 @@ class Vehicule: # generalise Avion
 
 
 class Avion(Vehicule): #avion herite de vehicule, le specialise
-    def __init__(self, immatriculation, modele=None, **caracteristiques):
+    def __init__(self, immatriculation, modele=None):
         super().__init__()
         self.immatriculation = immatriculation
         self.modele = modele
