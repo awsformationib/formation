@@ -3,7 +3,7 @@ import math
 class Vehicule: # generalise Avion
 
     def __init__(self):
-        self.vitesse_max = 999
+        self.vitesse_max = 0
 
     def deplace(self):
         pass
@@ -15,7 +15,9 @@ class Avion(Vehicule): #avion herite de vehicule, le specialise
         self.immatriculation = immatriculation
         self.modele = modele
         self.en_vol = False
+        self.vitesse_max = 800
 
+    # decollage
     def decoller(self):
         self.en_vol = True
 

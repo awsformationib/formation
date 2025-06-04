@@ -19,14 +19,14 @@ Faire émerger la notion de **classe** comme plan de construction, et d’**obje
 
 #### 1. Définir une classe
 
-```python
+```
 class Avion:
     pass
 ```
 
 #### 2. Ajouter un constructeur `__init__`
 
-```python
+```
 class Avion:
     def __init__(self, immatriculation, modele):
         self.immatriculation = immatriculation
@@ -39,7 +39,7 @@ class Avion:
 
 #### 3. Créer une instance
 
-```python
+```
 a1 = Avion("F-GKXJ", "A320")
 print(a1.immatriculation)  # → "F-GKXJ"
 ```
