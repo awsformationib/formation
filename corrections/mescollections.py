@@ -110,4 +110,20 @@ else:
     print(f"Pas de {cle} dans ces infos")
 
 
+## module collections
+from collections import defaultdict
+
+"""
+def cvide():
+    return "NON TROUVE"
+"""
+
+cvide = lambda  : "NON TROUVE"
+
+di = dict()
+dd = defaultdict(cvide)
+#print(di['hello'])
+print(dd['hello'])
+
+
 

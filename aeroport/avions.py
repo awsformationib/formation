@@ -112,7 +112,7 @@ if __name__ == "__main__":
 
     print(a1)
     print(a2)
-    print(gp1, gp1.__vitesse_max)
+    print(gp1)
 
     print(dir(gp1))
 

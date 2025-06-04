@@ -1,9 +1,11 @@
 import json
+import logging
+from collections import defaultdict, Counter
 
+import config
 from aeroport.avions import Avion
-from aeroport.encoders import VolEncoder
+from exporters import export_to_json, export_to_csv
 from vols import creer_vols_fictifs, Vol
-from utils import afficher_dict
 
 # IF : le code en dessus ne s'execute que si ce code est le
 # script d'entre aka script principal
@@ -12,17 +14,17 @@ from utils import afficher_dict
 
 if __name__=="__main__":
 
+    config.init()
+
+    logging.basicConfig(filename=config.PATHLOG / "exporters.log", encoding="utf-8", level=config.LEVEL)
+
+    logging.info("Demarrage")
+
     # CAPTATION
     tous_les_vols = creer_vols_fictifs(49)
 
-    # TRANSFORM
-        #TODO
-
-    def compare(v1:Vol):
-        return -1 * len(v1.destination)
-
     # RESTITITUION
-    tous_les_vols.sort(key=compare)
+    tous_les_vols.sort(key=lambda v1 : -1 * len(v1.destination))
 
     for v in tous_les_vols:
        print(v)
@@ -32,10 +34,16 @@ if __name__=="__main__":
     v1 = Vol("I1X214","Paris", a)
     v2 = Vol("I1X214", "Paris", a)
 
-    print(v1 == v2)
 
-    f = open("../data/tous_les_vols.json", mode="wt", encoding="utf-8")
-    json.dump(tous_les_vols,f,cls=VolEncoder, indent=4,  ensure_ascii=False)
-    f.close()
+    export_to_json("tous_les_vols.json",tous_les_vols )
+    export_to_csv("tous_les_vols.csv",tous_les_vols ) #TODO
 
-# python une liste de dict dans un fichier json
+    vols_par_destination = defaultdict(list)
+    for vol in tous_les_vols:
+        vols_par_destination[vol.destination].append(vol)
+
+    stats = Counter(vol.destination for vol in tous_les_vols)
+
+    print(stats)
+
+    logging.info("Arret du programme")
