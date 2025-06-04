@@ -34,7 +34,7 @@ if __name__=="__main__":
 
     print(v1 == v2)
 
-    f = open("tous_les_vols.json", mode="wt", encoding="utf-8")
+    f = open("../data/tous_les_vols.json", mode="wt", encoding="utf-8")
     json.dump(tous_les_vols,f,cls=VolEncoder, indent=4,  ensure_ascii=False)
     f.close()
 

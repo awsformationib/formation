@@ -52,7 +52,13 @@ class Vol:
         return self.destination == autre_vol.destination and self.numero == autre_vol.numero
 
 
+def creer_vol():
+    avion = Avion(genere_immat())
 
+    # creation vol (qui fait ref a l'avion)
+    nvol = genere_immat(with_digit=True, taille=6)
+    nville = villes_random()
+    return Vol(nvol, nville, avion)
 
 def creer_vols_fictifs(combien=0) -> list:
     tous_les_vols = []
@@ -71,4 +77,5 @@ def creer_vols_fictifs(combien=0) -> list:
 
     return tous_les_vols
 
-
+if __name__=="__main__":
+    v = creer_vol()
