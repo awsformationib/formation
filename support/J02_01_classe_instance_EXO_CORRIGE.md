@@ -66,6 +66,7 @@ for pilote in [p1, p2, p3]:
 from pilote import Pilote
 from avion_objet import Avion  # à adapter selon ton import réel
 
+
 class Affectation:
     def __init__(self, pilote, avion):
         self.pilote = pilote
@@ -74,8 +75,9 @@ class Affectation:
     def afficher_affectation(self):
         print(
             f"Pilote {self.pilote.nom_complet()} ({self.pilote.licence}) "
-            f"affecté à l’avion {self.avion.immatriculation} ({self.avion.modele})"
+            f"affecté à l’avion {self.avion.immatriculation} ({self.avion.__modele})"
         )
+
 
 # Exemple d'utilisation
 if __name__ == "__main__":
