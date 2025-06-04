@@ -12,7 +12,7 @@ L’objectif est de mobiliser **au moins 5 modules standards** vus en J1-J2, en 
 
 ### 📦 Point de départ
 
-Les participants décompressent le dossier `air_ops.zip` et travaillent à partir de ce code.
+Les participants décompressent le dossier `J03_01_defi_python_express_participants.zip` et travaillent à partir de ce code.
 Chaque équipe choisit un **défi à réaliser** (voir plus bas) ou peut proposer le sien.
 
 ---
