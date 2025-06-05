@@ -3,7 +3,7 @@
 
 ## 📦 Rappel : Classe `Vol`
 
-```python
+```
 from datetime import datetime
 
 class Vol:
@@ -21,7 +21,7 @@ class Vol:
 
 ## 🔌 Connexion MySQL
 
-```python
+```
 import mysql.connector
 
 def get_connection():
@@ -37,7 +37,7 @@ def get_connection():
 
 ## 🧱 Fonction `ajouter_vol(vol)`
 
-```python
+```
 def ajouter_vol(vol: Vol):
     conn = get_connection()
     cursor = conn.cursor()
@@ -65,7 +65,7 @@ def ajouter_vol(vol: Vol):
 
 ## 📖 Fonction `lister_vols()`
 
-```python
+```
 def lister_vols():
     conn = get_connection()
     cursor = conn.cursor()
@@ -83,7 +83,7 @@ def lister_vols():
 
 ## 🔍 Fonction `chercher_vol_par_numero(numero)`
 
-```python
+```
 def chercher_vol_par_numero(numero: str):
     conn = get_connection()
     cursor = conn.cursor()
@@ -103,7 +103,7 @@ def chercher_vol_par_numero(numero: str):
 
 ## 🛠️ Fonction `mettre_a_jour_statut(numero, nouveau_statut)`
 
-```python
+```
 def mettre_a_jour_statut(numero: str, nouveau_statut: str):
     conn = get_connection()
     cursor = conn.cursor()
@@ -119,7 +119,7 @@ def mettre_a_jour_statut(numero: str, nouveau_statut: str):
 
 ## 🗑️ Fonction `supprimer_vol(numero)`
 
-```python
+```
 def supprimer_vol(numero: str):
     conn = get_connection()
     cursor = conn.cursor()
@@ -135,7 +135,7 @@ def supprimer_vol(numero: str):
 
 ## 🔎 Bonus : Recherche par destination (LIKE)
 
-```python
+```
 def chercher_par_destination(partiel: str):
     conn = get_connection()
     cursor = conn.cursor()

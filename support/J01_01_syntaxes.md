@@ -27,7 +27,7 @@ Laisser les stagiaires proposer : numéro de vol, ville de départ, heure, statu
 
 **Exemples en contexte** :
 
-```python
+```
 numero_vol = "AF1234"
 ville_depart = "Paris"
 ville_arrivee = "Toulouse"
@@ -36,7 +36,7 @@ distance_km = 604.3
 en_retard = True
 ```
 
-```python
+```
 message = f"Le vol {numero_vol} part de {ville_depart} à {heure_depart}."
 print(message)
 ```
@@ -60,7 +60,7 @@ print(message)
    * En retard (booléen)
 3. Afficher un message formaté du type :
 
-```python
+```
 "Le vol AF1234 part de Paris à 10:30 en direction de Toulouse (604.3 km). Statut : En retard."
 ```
 
@@ -88,7 +88,7 @@ print(message)
 
 > ❓ Que donne cette ligne ?
 
-```python
+```
 print("Vol" + " " + str(123))
 ```
 

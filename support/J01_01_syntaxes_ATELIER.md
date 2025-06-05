@@ -3,7 +3,7 @@
 
 ## 🧩 Fiche 1.1 – Variables, Types et Opérateurs (ATELIER)
 
-```python
+```
 # vol_basique.py
 
 # Données du vol

@@ -7,7 +7,7 @@
 
 ### ✅ `piste.py`
 
-```python
+```
 # piste.py
 
 class Piste:
@@ -32,7 +32,7 @@ p2.afficher_infos()
 
 ### ✅ `pilote.py`
 
-```python
+```
 # pilote.py
 
 class Pilote:
@@ -60,7 +60,7 @@ for pilote in [p1, p2, p3]:
 
 ### ✅ `affectation.py`
 
-```python
+```
 # affectation.py
 
 from pilote import Pilote

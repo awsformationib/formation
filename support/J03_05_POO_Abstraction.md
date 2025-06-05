@@ -48,7 +48,7 @@ Comprendre le concept d’**abstraction** en Python, c’est-à-dire comment dé
 
 Avec le module `abc` (abstract base class) :
 
-```python
+```
 from abc import ABC, abstractmethod
 
 class Personnel(ABC):

@@ -17,7 +17,7 @@
 
 #### 1. Méthodes liées à l’instance (méthodes classiques)
 
-```python
+```
 class Avion:
     def __init__(self, immatriculation):
         self.immatriculation = immatriculation
@@ -37,7 +37,7 @@ class Avion:
 
 #### 2. Attributs d’instance vs attributs de classe
 
-```python
+```
 class Avion:
     type_appareil = "Avion"  # attribut de classe (partagé)
 
@@ -52,7 +52,7 @@ class Avion:
 
 #### 3. Méthodes de classe (`@classmethod`)
 
-```python
+```
 class Avion:
     compteur = 0
 
@@ -72,7 +72,7 @@ class Avion:
 
 #### 4. Méthodes statiques (`@staticmethod`)
 
-```python
+```
 class Avion:
     @staticmethod
     def aide():

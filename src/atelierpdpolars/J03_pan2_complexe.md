@@ -22,7 +22,7 @@ Apprendre à manipuler efficacement des données de vols en Python avec **Pandas
 
 ## 🔌 2. Chargement des vols avec Pandas
 
-```python
+```
 import pandas as pd
 import mysql.connector
 
@@ -55,7 +55,7 @@ df_vols = charger_vols_en_dataframe()
 
 ### 🧮 4.1. Calcul de **retard effectif** (en minutes)
 
-```python
+```
 df_vols['heure_decollage'] = pd.to_datetime(df_vols['heure_decollage'])
 df_vols['heure_creation'] = pd.to_datetime(df_vols['heure_creation'])
 
@@ -66,7 +66,7 @@ df_vols['duree_attente'] = (df_vols['heure_decollage'] - df_vols['heure_creation
 
 ### 📊 4.2. Statistiques par **jour de la semaine**
 
-```python
+```
 df_vols['jour'] = df_vols['heure_creation'].dt.day_name()
 
 stats_par_jour = df_vols.groupby('jour').agg({
@@ -79,7 +79,7 @@ stats_par_jour = df_vols.groupby('jour').agg({
 
 ### 🔁 4.3. **Pivot** : Statuts des vols par destination
 
-```python
+```
 pivot_statuts = df_vols.pivot_table(
     index='destination',
     columns='statut',
@@ -93,7 +93,7 @@ pivot_statuts = df_vols.pivot_table(
 
 ### ⚠️ 4.4. Détection de **valeurs anormales**
 
-```python
+```
 # Vols dont la durée entre création et décollage dépasse 6h
 df_outliers = df_vols[df_vols['duree_attente'] > 360]
 ```
@@ -102,7 +102,7 @@ df_outliers = df_vols[df_vols['duree_attente'] > 360]
 
 ### 🔗 4.5. Fusion avec une table externe (ex: `airports.csv`)
 
-```python
+```
 df_airports = pd.read_csv("airports.csv")  # contient 'destination' + 'pays' + 'type'
 df_merge = pd.merge(df_vols, df_airports, how='left', on='destination')
 ```
@@ -111,7 +111,7 @@ df_merge = pd.merge(df_vols, df_airports, how='left', on='destination')
 
 ### 🧩 4.6. Application d’une fonction personnalisée
 
-```python
+```
 def classer_retard(mins):
     if pd.isna(mins): return "non précisé"
     elif mins < 30: return "court"
@@ -125,7 +125,7 @@ df_vols['categorie_retard'] = df_vols['duree_attente'].apply(classer_retard)
 
 ### 🧮 4.7. Boucle sur groupes + statistiques cumulées
 
-```python
+```
 stats_par_dest = []
 
 for dest, groupe in df_vols.groupby('destination'):
@@ -140,7 +140,7 @@ df_stats = pd.DataFrame(stats_par_dest)
 
 ## 📈 5. Visualisations (bonus)
 
-```python
+```
 import matplotlib.pyplot as plt
 
 # Histogramme des retards
@@ -159,7 +159,7 @@ plt.show()
 
 ## 🛠️ 6. Export des données enrichies
 
-```python
+```
 df_vols.to_csv("vols_enrichis.csv", index=False)
 df_stats.to_excel("stats_par_destination.xlsx", index=False)
 ```

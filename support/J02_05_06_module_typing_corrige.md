@@ -17,7 +17,7 @@ Ce fichier regroupe les classes essentielles, avec l'utilisation de `typing` pou
 
 ### ✅ `typing_airops.py`
 
-```python
+```
 from __future__ import annotations  # permet l’utilisation de types avant leur définition
 from typing import Optional
 from enum import Enum

@@ -49,7 +49,7 @@ L’héritage permet :
 
 ### 🔧 **Illustration en Python**
 
-```python
+```
 class Avion:
     def __init__(self, immatriculation):
         self.immatriculation = immatriculation

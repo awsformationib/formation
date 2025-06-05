@@ -29,7 +29,7 @@ Faire émerger les risques liés à l’accès direct aux attributs (`obj.attr =
 
 #### 2. Getters / Setters manuels
 
-```python
+```
 class Avion:
     def __init__(self, immat):
         self.__immatriculation = immat
@@ -46,7 +46,7 @@ class Avion:
 
 #### 3. Utiliser `@property` et `@<attr>.setter`
 
-```python
+```
 class Avion:
     def __init__(self, immat):
         self.__immatriculation = immat
@@ -65,7 +65,7 @@ class Avion:
 
 Utilisation :
 
-```python
+```
 a = Avion("F-GKXJ")
 print(a.immatriculation)       # getter
 a.immatriculation = "F-HBXO"   # setter

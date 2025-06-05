@@ -61,7 +61,7 @@ print(a1.immatriculation)  # → "F-GKXJ"
 
 ### 🧪 Exemple attendu :
 
-```python
+```
 Avion F-GKXJ, modèle A320
 Avion F-HBXO, modèle B737
 ```
@@ -84,7 +84,7 @@ Avion F-HBXO, modèle B737
 
 **❓ Que fait le code suivant ?**
 
-```python
+```
 class Vol:
     def __init__(self, numero):
         self.numero = numero

@@ -43,7 +43,7 @@ Assembler une application Python complète qui :
 ✅ Ajouter un vol,
 ✅ Mettre à jour les informations si nécessaire.
 
-```python
+```
 import mysql.connector
 
 def connecter(config):
@@ -75,7 +75,7 @@ def ajouter_vol(conn, numero, destination):
 ✅ Afficher les vols,
 ✅ Boutons : Rafraîchir, Générer rapport, Quitter.
 
-```python
+```
 import PySimpleGUI as sg
 
 def afficher_interface(vols, callbacks):
@@ -109,7 +109,7 @@ def afficher_interface(vols, callbacks):
 * Liste complète,
 * Liste filtrée (ex. vers Paris).
 
-```python
+```
 from weasyprint import HTML
 
 def generer_rapport(vols, fichier_pdf="rapport_final.pdf"):
@@ -132,7 +132,7 @@ def generer_rapport(vols, fichier_pdf="rapport_final.pdf"):
 ✅ Charger la config,
 ✅ Préparer des traitements Pythonic (générateurs, map, filter…).
 
-```python
+```
 import argparse
 import json
 
@@ -154,7 +154,7 @@ Assemble tout :
 ✅ Rafraîchit les vols,
 ✅ Branche les callbacks.
 
-```python
+```
 from modules.db import connecter, lire_vols
 from modules.gui import afficher_interface
 from modules.reporting import generer_rapport

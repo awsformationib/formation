@@ -28,7 +28,7 @@ Faire émerger la notion de condition, puis de fonction de vérification.
 
 **Exemples en contexte :**
 
-```python
+```
 def peut_decoller(piste_libre: bool, carburant_ok: bool) -> bool:
     return piste_libre and carburant_ok
 
@@ -50,7 +50,7 @@ else:
 1. Créer une fonction `peut_decoller(avion_pret: bool, piste_dispo: bool) -> bool`
 2. Simuler 3 avions sous forme de dictionnaires :
 
-```python
+```
 vols = [
     {"numero": "AF123", "pret": True, "piste": True},
     {"numero": "BA456", "pret": False, "piste": True},
@@ -61,7 +61,7 @@ vols = [
 3. Parcourir la liste avec une boucle `for`
 4. Afficher pour chaque vol un message :
 
-```python
+```
 "Le vol AF123 peut décoller." ou "Le vol BA456 ne peut pas décoller."
 ```
 
@@ -88,7 +88,7 @@ vols = [
 
 > ❓ Que renvoie cette fonction ?
 
-```python
+```
 def test(x):
     if x > 5:
         return "OK"

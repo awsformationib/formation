@@ -19,14 +19,14 @@ Faire émerger la notion de fonction avec paramètres, valeur de retour, et la p
 
 #### 🧩 1. Définir une fonction simple
 
-```python
+```
 def afficher_vol(vol):
     print(f"Vol {vol['numero']} vers {vol['destination']}")
 ```
 
 #### 🧩 2. Paramètres positionnels et nommés
 
-```python
+```
 def message_accueil(nom, aeroport):
     return f"Bienvenue {nom}, vous êtes à {aeroport}."
 
@@ -36,14 +36,14 @@ print(message_accueil(nom="Anna", aeroport="Lyon"))
 
 #### 🧩 3. Valeurs par défaut
 
-```python
+```
 def annoncer_vol(numero, destination="Inconnue"):
     print(f"Annonce : vol {numero} vers {destination}")
 ```
 
 #### 🧩 4. `*args` (paramètres multiples positionnels)
 
-```python
+```
 def addition_vols(*distances):
     return sum(distances)
 
@@ -52,7 +52,7 @@ addition_vols(300, 500, 150)  # => 950
 
 #### 🧩 5. `**kwargs` (paramètres nommés optionnels)
 
-```python
+```
 def info_supplémentaire(**infos):
     for cle, valeur in infos.items():
         print(f"{cle} : {valeur}")
@@ -62,7 +62,7 @@ info_supplémentaire(pilote="Martin", avion="A320", piste=4)
 
 #### 🧩 6. Portée des variables
 
-```python
+```
 vol_global = "AF123"
 
 def changer_vol():
@@ -105,7 +105,7 @@ print(vol_global)  # la variable globale n’est pas affectée
 
 > ❓ Que vaut `a` après l’appel suivant ?
 
-```python
+```
 a = 5
 
 def test():

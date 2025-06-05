@@ -54,7 +54,7 @@
 
 ### 📋 Exemple attendu
 
-```python
+```
 vol1 = Vol("AF123", "Lyon", avion)
 vol1.afficher_infos()
 vol1.changer_statut("en cours")

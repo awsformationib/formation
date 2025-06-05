@@ -31,7 +31,7 @@
 
 **1.** Que va afficher ce code ?
 
-```python
+```
 a = 10
 b = "10"
 print(a + int(b))
@@ -43,7 +43,7 @@ print(a + int(b))
 
 **2.** Complète la condition pour que le vol ne décolle que si l’avion est prêt **et** une piste est disponible :
 
-```python
+```
 if ____________:
     print("Décollage autorisé")
 ```
@@ -65,7 +65,7 @@ d) `foreach`
 
 **4.** Que fait ce code ?
 
-```python
+```
 def f(x=5):
     return x * 2
 
@@ -79,7 +79,7 @@ print(f(3))
 
 **5.** Quel est le résultat ?
 
-```python
+```
 def fusion(*args):
     return " ".join(args)
 
@@ -98,7 +98,7 @@ print(fusion("AF123", "vers", "Nice"))
 
 **7.** Comment accéder à la valeur `"Nice"` dans ce dictionnaire ?
 
-```python
+```
 vol = {"numero": "AF123", "destination": "Nice"}
 ```
 
@@ -108,7 +108,7 @@ vol = {"numero": "AF123", "destination": "Nice"}
 
 **8.** Que fait la ligne suivante ?
 
-```python
+```
 if __name__ == "__main__":
 ```
 
@@ -118,7 +118,7 @@ if __name__ == "__main__":
 
 **9.** Que vaut `a` à la fin ?
 
-```python
+```
 a = 10
 
 def change():
@@ -134,12 +134,12 @@ print(a)
 
 **10.** Quelle est la différence entre :
 
-```python
+```
 import avions
 ```
 
 et
 
-```python
+```
 from avions import creer_avion
 ```

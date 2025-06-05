@@ -29,7 +29,7 @@ Chaque atelier apportera une nouvelle brique et permettra aux participants de pr
 
 **Bribe de départ :**
 
-```python
+```
 import mysql.connector
 
 def get_vols():
@@ -55,7 +55,7 @@ def get_vols():
 
 **Bribe de départ :**
 
-```python
+```
 def ajouter_vol(numero, destination):
     cursor.execute(
         "INSERT INTO vols (numero, destination) VALUES (%s, %s)",
@@ -78,7 +78,7 @@ def ajouter_vol(numero, destination):
 
 **Bribe de départ (tkinter) :**
 
-```python
+```
 import tkinter as tk
 
 root = tk.Tk()
@@ -106,7 +106,7 @@ root.mainloop()
 
 **Bribe de départ (WeasyPrint) :**
 
-```python
+```
 from weasyprint import HTML
 
 html = "<h1>Rapport des vols</h1><ul>"

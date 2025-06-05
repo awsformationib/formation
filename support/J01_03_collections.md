@@ -42,7 +42,7 @@ Faire émerger les besoins : collections ordonnées (liste), associations clé-v
 
 1. Créer une **liste de dictionnaires**, chaque dictionnaire représentant un vol :
 
-```python
+```
 vols = [
     {"numero": "AF123", "destination": "Nice", "immatriculation": "F-GKXJ"},
     {"numero": "LH456", "destination": "Berlin", "immatriculation": "D-ABCD"},

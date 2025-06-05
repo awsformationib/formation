@@ -19,7 +19,7 @@ Le module `enum` permet de définir des **types énumérés**, c’est-à-dire u
 
 #### Exemple :
 
-```python
+```
 from enum import Enum
 
 class StatutVol(Enum):
@@ -35,7 +35,7 @@ class StatutVol(Enum):
 
 ### ✈️ Intégration dans `Vol`
 
-```python
+```
 from enum import Enum
 
 class StatutVol(Enum):

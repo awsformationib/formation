@@ -23,7 +23,7 @@ Le module `random` permet :
 
 #### Exemples :
 
-```python
+```
 import random
 
 print(random.randint(100, 999))        # entier aléatoire
@@ -37,7 +37,7 @@ print(random.random())                 # flottant entre 0 et 1
 
 **Générer automatiquement une série de vols** :
 
-```python
+```
 import random
 
 VILLES = ["Lyon", "Nice", "Toulouse", "Bordeaux", "Lille"]

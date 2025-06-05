@@ -26,13 +26,13 @@ Apprendre à écrire des tests `pytest` pour le projet AirOps :
 
 3️⃣ Installez `pytest` :
 
-```bash
+```
 pip install pytest
 ```
 
 4️⃣ Vérifiez que vous pouvez lancer un test simple :
 
-```bash
+```
 pytest
 ```
 
@@ -42,7 +42,7 @@ pytest
 
 Dans `tests/test_avion.py` :
 
-```python
+```
 import pytest
 from avion import Avion
 
@@ -70,7 +70,7 @@ def avion():
 
 Dans `tests/test_vol.py` :
 
-```python
+```
 import pytest
 from vol import Vol, Avion, Piste
 
@@ -101,7 +101,7 @@ def vol():
 
 Dans `tests/test_pilote.py` :
 
-```python
+```
 import pytest
 from pilote import Pilote
 

@@ -36,7 +36,7 @@
 
 ## 🧪 Exemple : ajout de `datetime` et `uuid` dans la classe `Vol`
 
-```python
+```
 from datetime import datetime
 import uuid
 

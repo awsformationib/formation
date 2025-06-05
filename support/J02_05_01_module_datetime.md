@@ -22,7 +22,7 @@ Le module `datetime` permet de :
 
 #### Exemples :
 
-```python
+```
 from datetime import datetime
 
 # Heure actuelle
@@ -43,7 +43,7 @@ print(duree.total_seconds(), "secondes écoulées")
 
 ### 🛫 Intégration dans `Vol`
 
-```python
+```
 from datetime import datetime
 
 class Vol:

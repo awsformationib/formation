@@ -30,7 +30,7 @@ Le module `collections` contient plusieurs structures puissantes :
 
 #### 1. Grouper les vols par destination avec `defaultdict`
 
-```python
+```
 from collections import defaultdict
 
 vols_par_destination = defaultdict(list)
@@ -40,7 +40,7 @@ for vol in liste_vols:
 
 #### 2. Gérer une file d’attente de vols avec `deque`
 
-```python
+```
 from collections import deque
 
 file_decollage = deque()
@@ -50,7 +50,7 @@ file_decollage.popleft()  # premier à décoller
 
 #### 3. Créer une structure légère avec `namedtuple`
 
-```python
+```
 from collections import namedtuple
 
 VolTuple = namedtuple("VolTuple", ["numero", "destination"])
@@ -59,7 +59,7 @@ vol = VolTuple("AF123", "Lyon")
 
 #### 4. Statistiques des destinations avec `Counter`
 
-```python
+```
 from collections import Counter
 
 stats = Counter(vol.destination for vol in liste_vols)

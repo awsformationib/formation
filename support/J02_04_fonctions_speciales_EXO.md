@@ -19,7 +19,7 @@
 
 ### 📄 Code de départ (`vol_comparable.py` – à compléter)
 
-```python
+```
 # vol_comparable.py
 
 class Vol:
@@ -52,7 +52,7 @@ class Vol:
 
 ### 🧪 Partie test à utiliser
 
-```python
+```
 if __name__ == "__main__":
     vols = [
         Vol("AF123", "Lyon"),
@@ -100,7 +100,7 @@ if __name__ == "__main__":
 
 ### 📋 Résumé des signatures à compléter
 
-```python
+```
 def __str__(self): ...
 def __repr__(self): ...
 def __eq__(self, other): ...

@@ -5,7 +5,7 @@
 
 ---
 
-```python
+```
 # avion_actions.py
 
 class Avion:

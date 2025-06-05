@@ -32,7 +32,7 @@ pymysql
 
 ## 2. ⚙️ `database.py`
 
-```python
+```
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
@@ -48,7 +48,7 @@ Base = declarative_base()
 
 ## 3. 🛩️ `models.py`
 
-```python
+```
 from sqlalchemy import Column, Integer, String, Boolean
 from .database import Base
 
@@ -65,7 +65,7 @@ class Avion(Base):
 
 ## 4. 🧰 `schemas.py`
 
-```python
+```
 from pydantic import BaseModel
 
 class AvionBase(BaseModel):
@@ -87,7 +87,7 @@ class AvionRead(AvionBase):
 
 ## 5. 🚀 `main.py`
 
-```python
+```
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from typing import List
@@ -140,7 +140,7 @@ def delete_avion(avion_id: int, db: Session = Depends(get_db)):
 
 ## ▶️ Lancer le serveur
 
-```bash
+```
 uvicorn main:app --reload
 ```
 

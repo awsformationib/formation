@@ -45,7 +45,7 @@ Construire une petite application Python qui, à chaque exécution :
 
 #### 🛠 Étape 1 : Charger la config avec `argparse`
 
-```python
+```
 import argparse
 import json
 
@@ -63,7 +63,7 @@ def charger_config():
 
 #### 🛠 Étape 2 : Se connecter à MySQL
 
-```python
+```
 import mysql.connector
 
 def connecter_mysql(config):
@@ -80,7 +80,7 @@ def connecter_mysql(config):
 
 #### 🛠 Étape 3 : Lire les vols
 
-```python
+```
 def lire_vols(conn):
     cursor = conn.cursor()
     cursor.execute("SELECT numero, destination FROM vols")
@@ -95,7 +95,7 @@ def lire_vols(conn):
 
 > Pour cette version simple, on ajoute des vols directement dans le code (pas encore depuis l’interface utilisateur).
 
-```python
+```
 def ajouter_vol(conn, numero, destination):
     cursor = conn.cursor()
     cursor.execute(

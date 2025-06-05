@@ -23,7 +23,7 @@ Le module `dataclasses` permet de :
 
 #### Exemple minimal :
 
-```python
+```
 from dataclasses import dataclass
 
 @dataclass
@@ -41,7 +41,7 @@ Résultat :
 
 ### ✈️ Intégration dans `AirOps`
 
-```python
+```
 from dataclasses import dataclass
 from uuid import uuid4
 
@@ -54,7 +54,7 @@ class Avion:
 
 ⚠️ Attention : si `uuid4()` est mis directement comme valeur par défaut, il est partagé par tous (piège classique). Utiliser `field(default_factory=...)` pour générer une valeur unique à chaque instance :
 
-```python
+```
 from dataclasses import dataclass, field
 from uuid import uuid4
 

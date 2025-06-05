@@ -12,7 +12,7 @@
 
 ### ✅ `vol_encapsule.py`
 
-```python
+```
 # vol_encapsule.py
 
 class Vol:

@@ -21,7 +21,7 @@ Les **méthodes spéciales** sont des fonctions prédéfinies que Python appelle
 
 ### 📦 1. Affichage : `__str__()` vs `__repr__()`
 
-```python
+```
 class Avion:
     def __str__(self):
         return f"Avion {self.immatriculation}"
@@ -39,7 +39,7 @@ class Avion:
 
 ### 🟰 2. Comparaison : `__eq__()`, `__lt__()`, etc.
 
-```python
+```
 def __eq__(self, other):
     return self.numero == other.numero
 
@@ -60,7 +60,7 @@ def __lt__(self, other):
 
 ### 🔐 3. Hashabilité : `__hash__()`
 
-```python
+```
 def __hash__(self):
     return hash((self.numero, self.destination))
 ```

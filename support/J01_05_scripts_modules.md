@@ -39,14 +39,14 @@ aeroport/
 
 **`avions.py`**
 
-```python
+```
 def creer_avion(code):
     return {"immatriculation": code}
 ```
 
 **`main.py`**
 
-```python
+```
 from avions import creer_avion
 
 if __name__ == "__main__":

@@ -22,7 +22,7 @@ Le module `json` permet :
 
 #### Exemple d’écriture :
 
-```python
+```
 import json
 
 data = {"numero": "AF123", "destination": "Lyon"}
@@ -32,7 +32,7 @@ with open("vol.json", "w", encoding="utf-8") as f:
 
 #### Exemple de lecture :
 
-```python
+```
 with open("vol.json", encoding="utf-8") as f:
     data = json.load(f)
     print(data["numero"])
@@ -46,7 +46,7 @@ with open("vol.json", encoding="utf-8") as f:
 
 Exporter une liste de vols :
 
-```python
+```
 import json
 from pathlib import Path
 

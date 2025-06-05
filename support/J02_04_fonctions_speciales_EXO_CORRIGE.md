@@ -7,7 +7,7 @@
 
 ### ✅ `vol_comparable.py` – Corrigé complet
 
-```python
+```
 # vol_comparable.py
 
 class Vol:

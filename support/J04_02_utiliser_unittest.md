@@ -27,7 +27,7 @@ Découvrir le module `unittest` :
 
 On imagine une classe **Calculatrice** :
 
-```python
+```
 class Calculatrice:
     def addition(self, a, b):
         return a + b
@@ -45,7 +45,7 @@ class Calculatrice:
 
 ### 🏗 **Structure d’un test `unittest`**
 
-```python
+```
 import unittest
 
 class TestCalculatrice(unittest.TestCase):
@@ -90,7 +90,7 @@ class TestCalculatrice(unittest.TestCase):
 
 Depuis le terminal :
 
-```bash
+```
 python -m unittest test_calculatrice.py
 ```
 
@@ -131,7 +131,7 @@ Depuis un IDE (VSCode, PyCharm) : clic droit → **Run tests**.
 
 Si vous avez plusieurs fichiers :
 
-```bash
+```
 python -m unittest discover -s tests
 ```
 

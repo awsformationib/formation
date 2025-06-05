@@ -22,7 +22,7 @@ Apprendre les bases de la bibliothèque **Pandas** en Python, avec un cas concre
 
 ## 🔌 2. Connexion à la base & chargement des vols avec Pandas
 
-```python
+```
 import pandas as pd
 import mysql.connector
 
@@ -48,7 +48,7 @@ print(df_vols.head())
 
 ### 📌 Infos générales
 
-```python
+```
 df_vols.info()        # Types, nulls
 df_vols.describe()    # Statistiques sur colonnes numériques
 df_vols.columns       # Liste des colonnes
@@ -59,7 +59,7 @@ df_vols.shape         # (lignes, colonnes)
 
 ### 🔍 Sélection et filtrage
 
-```python
+```
 # Colonnes
 df_vols['destination']
 df_vols[['numero', 'statut']]
@@ -76,7 +76,7 @@ df_vols.iloc[0]
 
 ### ✂️ Ajout et suppression de colonnes
 
-```python
+```
 df_vols['retard_minutes'] = (df_vols['heure_arrivee'] - df_vols['heure_decollage']).dt.total_seconds() / 60
 
 # Suppression
@@ -87,7 +87,7 @@ df_vols.drop(columns=['avion'], inplace=True)
 
 ### 📆 Manipulations temporelles
 
-```python
+```
 df_vols['heure_creation'] = pd.to_datetime(df_vols['heure_creation'])
 df_vols['jour_semaine'] = df_vols['heure_creation'].dt.day_name()
 ```
@@ -96,7 +96,7 @@ df_vols['jour_semaine'] = df_vols['heure_creation'].dt.day_name()
 
 ### 🔢 Groupements et agrégations
 
-```python
+```
 df_vols.groupby('destination')['numero'].count()
 df_vols.groupby('statut').agg({'numero': 'count', 'retard_minutes': 'mean'})
 ```
@@ -105,7 +105,7 @@ df_vols.groupby('statut').agg({'numero': 'count', 'retard_minutes': 'mean'})
 
 ### 🔁 Tri et réindexation
 
-```python
+```
 df_vols.sort_values(by='heure_creation', ascending=False)
 df_vols.reset_index(drop=True, inplace=True)
 ```
@@ -114,7 +114,7 @@ df_vols.reset_index(drop=True, inplace=True)
 
 ### 🔍 Valeurs manquantes
 
-```python
+```
 df_vols.isna().sum()
 df_vols = df_vols.dropna(subset=['heure_decollage'])
 ```
@@ -123,7 +123,7 @@ df_vols = df_vols.dropna(subset=['heure_decollage'])
 
 ## 🖇️ 4. Export des résultats
 
-```python
+```
 df_vols.to_csv("vols_analyse.csv", index=False)
 df_vols.to_excel("vols_rapport.xlsx", index=False)
 ```
@@ -132,7 +132,7 @@ df_vols.to_excel("vols_rapport.xlsx", index=False)
 
 ## 🔄 5. Bonus : Visualisation simple
 
-```python
+```
 import matplotlib.pyplot as plt
 
 df_vols['destination'].value_counts().plot(kind='bar', title="Nombre de vols par destination")

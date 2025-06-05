@@ -28,7 +28,7 @@ Cela :
 
 #### Exemple simple :
 
-```python
+```
 from typing import List, Optional
 
 def get_pilotes_disponibles(code: str) -> List[str]:
@@ -44,7 +44,7 @@ def trouver_piste(numero: str) -> Optional["Piste"]:
 
 #### Exemple dans `vol.py` :
 
-```python
+```
 from typing import Optional
 from avion import Avion
 from enum import Enum
@@ -140,7 +140,7 @@ Cela :
 
 #### Exemple simple :
 
-```python
+```
 from typing import List, Optional
 
 def get_pilotes_disponibles(code: str) -> List[str]:
@@ -156,7 +156,7 @@ def trouver_piste(numero: str) -> Optional["Piste"]:
 
 #### Exemple dans `vol.py` :
 
-```python
+```
 from typing import Optional
 from avion import Avion
 from enum import Enum

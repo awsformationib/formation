@@ -52,7 +52,7 @@ Découvrir des **outils externes** (installables via `pip`) qui permettent d’a
 
 ### 🔧 **Installer et explorer un package**
 
-```bash
+```
 # Exemple : installer rich
 pip install rich
 

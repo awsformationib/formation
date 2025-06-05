@@ -30,7 +30,7 @@ CREATE TABLE vols (
 
 ## 🧩 Classe Python `Vol`
 
-```python
+```
 class Vol:
     def __init__(self, numero, destination, avion, statut, heure_creation, heure_decollage, heure_arrivee):
         self.numero = numero
@@ -46,7 +46,7 @@ class Vol:
 
 ## 🔌 Connexion à la base
 
-```python
+```
 import mysql.connector
 
 def get_connection():
@@ -86,7 +86,7 @@ def get_connection():
 
 ## 🧪 Exemple d’appel
 
-```python
+```
 from datetime import datetime
 
 v1 = Vol("AF123", "Tokyo", "Boeing 777", "prévu",

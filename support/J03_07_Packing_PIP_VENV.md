@@ -33,7 +33,7 @@ Avec un environnement virtuel (`venv`) :
 
 ### 🛠 **Créer un environnement virtuel avec `venv`**
 
-```bash
+```
 # Créer un nouvel environnement
 python -m venv venv
 
@@ -51,7 +51,7 @@ which python
 
 ### 📦 **Installer des packages avec `pip`**
 
-```bash
+```
 # Installer un package
 pip install requests
 

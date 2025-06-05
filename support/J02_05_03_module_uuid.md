@@ -23,7 +23,7 @@ Le module `uuid` permet de générer des **identifiants universellement uniques*
 
 #### Exemple :
 
-```python
+```
 import uuid
 
 id_unique = uuid.uuid4()
@@ -36,7 +36,7 @@ print(id_unique)  # Exemple : 20a62738-79aa-4c77-a4f3-e73f13b9dc9c
 
 Ajouter un identifiant unique dans chaque objet `Avion` ou `Vol` :
 
-```python
+```
 import uuid
 
 class Avion:

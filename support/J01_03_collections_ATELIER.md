@@ -3,7 +3,7 @@
 
 ## 🧩 Fiche 1.3 – Listes, Dictionnaires, Tuples, Ensembles (ATELIER)
 
-```python
+```
 # analyse_flotte.py
 
 # Liste de vols (chaque vol est un dictionnaire)

@@ -32,7 +32,7 @@
 
 Exporter les vols du jour dans un sous-dossier `exports` :
 
-```python
+```
 from pathlib import Path
 import csv
 

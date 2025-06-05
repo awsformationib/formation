@@ -1,7 +1,7 @@
 
 # 📦 `decorators.py` — Version avec `loguru`
 
-```python
+```
 from functools import wraps
 from loguru import logger
 import time
@@ -68,7 +68,7 @@ def retry(max_attempts=3, delay=1, exceptions=(Exception,)):
 
 ## 🔧 Exemple d’utilisation dans ton script
 
-```python
+```
 from decorators import benchmark, checker, retry
 from random import random
 
@@ -87,7 +87,7 @@ def traitement(x):
 
 ## 📁 Bonus : Configuration Loguru (dans ton script principal)
 
-```python
+```
 from loguru import logger
 
 logger.add("app.log", rotation="1 MB", retention="7 days", level="DEBUG")

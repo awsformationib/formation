@@ -29,7 +29,7 @@ Créer une petite application Python qui :
 
 Installez PySimpleGUI :
 
-```bash
+```
 pip install PySimpleGUI
 ```
 
@@ -43,7 +43,7 @@ pip install PySimpleGUI
 
 Réutilisez les fonctions déjà vues dans l’étape 1 :
 
-```python
+```
 import argparse
 import json
 import mysql.connector
@@ -69,7 +69,7 @@ def connecter_mysql(config):
 
 #### 🛠 Étape 2 : Lire les vols
 
-```python
+```
 def lire_vols(conn):
     cursor = conn.cursor()
     cursor.execute("SELECT numero, destination FROM vols")
@@ -80,7 +80,7 @@ def lire_vols(conn):
 
 #### 🛠 Étape 3 : Créer l’interface avec PySimpleGUI
 
-```python
+```
 import PySimpleGUI as sg
 
 def afficher_interface(vols):
@@ -120,7 +120,7 @@ def afficher_interface(vols):
 * Remplacez le `pass` dans le bouton “Rafraîchir” pour qu’il recharge vraiment les vols.
 * Testez l’application avec :
 
-```bash
+```
 python app_gui.py --config config.json
 ```
 

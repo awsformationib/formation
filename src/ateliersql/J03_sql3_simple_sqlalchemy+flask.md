@@ -16,7 +16,7 @@ vols_flask_app/
 
 ## 1️⃣ `models.py` – Définition du modèle `Vol`
 
-```python
+```
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -38,7 +38,7 @@ class Vol(db.Model):
 
 ## 2️⃣ `database.py` – Configuration de la base de données
 
-```python
+```
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask
 from models import db
@@ -53,7 +53,7 @@ def init_db(app: Flask):
 
 ## 3️⃣ `routes.py` – Routes Flask pour CRUD
 
-```python
+```
 from flask import Blueprint, request, jsonify
 from models import db, Vol
 from datetime import datetime
@@ -105,7 +105,7 @@ def delete_vol(numero):
 
 ## 4️⃣ `app.py` – Point d’entrée Flask
 
-```python
+```
 from flask import Flask
 from database import init_db
 from models import db
@@ -126,7 +126,7 @@ if __name__ == '__main__':
 
 ## 🧪 Exemple de test via `curl` ou Postman
 
-```bash
+```
 curl -X POST http://localhost:5000/vols \
      -H "Content-Type: application/json" \
      -d '{"numero": "AF001", "destination": "Tokyo", "avion": "Airbus A350", "statut": "prévu"}'
@@ -149,7 +149,7 @@ curl -X POST http://localhost:5000/vols \
 
 Depuis le dossier racine (`vols_flask_app/`), exécutez dans le terminal :
 
-```bash
+```
 python app.py
 ```
 

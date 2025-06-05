@@ -10,7 +10,7 @@ Comparer **syntaxe, performance et fonctionnalités** entre Pandas et Polars pou
 
 ## ⚙️ 0. Installation
 
-```bash
+```
 pip install pandas polars
 ```
 

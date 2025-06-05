@@ -7,7 +7,7 @@ Voici le fichier **corrigé complet `fonctions_vols.py`**, intégrant tous les c
 
 ---
 
-```python
+```
 # fonctions_vols.py
 
 # 1. Filtrer par destination

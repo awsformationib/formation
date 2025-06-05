@@ -14,13 +14,13 @@
 
 ✅ Installer :
 
-```bash
+```
 pip install rich
 ```
 
 ✅ Exemple d’intégration :
 
-```python
+```
 from rich.console import Console
 from rich.table import Table
 
@@ -51,13 +51,13 @@ Cela ouvre la discussion sur la lisibilité et l’UX des outils CLI.
 
 ✅ Installer :
 
-```bash
+```
 pip install requests
 ```
 
 ✅ Exemple d’intégration :
 
-```python
+```
 import requests
 
 def get_meteo_ville(ville):
@@ -83,13 +83,13 @@ C’est un excellent tremplin vers des discussions plus larges : authentificatio
 
 ✅ Installer :
 
-```bash
+```
 pip install pandas
 ```
 
 ✅ Exemple d’intégration :
 
-```python
+```
 import pandas as pd
 
 # Exemple de dataset minimal

@@ -14,7 +14,7 @@ Créer deux décorateurs réutilisables :
 
 Un décorateur est une **fonction qui prend une fonction en argument et retourne une nouvelle fonction** :
 
-```python
+```
 def mon_decorateur(fonction):
     def fonction_modifiee(*args, **kwargs):
         # code avant
@@ -30,7 +30,7 @@ def mon_decorateur(fonction):
 
 ### ✅ Usage
 
-```python
+```
 @benchmark
 def operation():
     # traitement
@@ -38,7 +38,7 @@ def operation():
 
 ### 🧪 Code
 
-```python
+```
 import time
 from functools import wraps
 
@@ -55,7 +55,7 @@ def benchmark(f):
 
 ### 🧪 Exemple d’utilisation
 
-```python
+```
 @benchmark
 def simulate_task(n):
     total = 0
@@ -70,7 +70,7 @@ def simulate_task(n):
 
 ### ✅ Usage
 
-```python
+```
 @checker(expected_args={'x': int, 'y': int})
 def addition(x, y):
     return x + y
@@ -78,7 +78,7 @@ def addition(x, y):
 
 ### 🧪 Code
 
-```python
+```
 from functools import wraps
 import inspect
 
@@ -102,7 +102,7 @@ def checker(expected_args: dict):
 
 ### 🧪 Exemple
 
-```python
+```
 @checker(expected_args={'x': int, 'y': float})
 def calcul(x, y):
     return x * y
@@ -115,7 +115,7 @@ def calcul(x, y):
 
 ## 🧠 Bonus : Empiler les décorateurs
 
-```python
+```
 @benchmark
 @checker(expected_args={'n': int})
 def traitement(n):

@@ -5,7 +5,7 @@
 
 ---
 
-```python
+```
 # avion_etat.py
 
 class Avion:

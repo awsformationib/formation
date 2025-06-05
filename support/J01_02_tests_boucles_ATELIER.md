@@ -3,7 +3,7 @@
 
 ## 🧩 Fiche 1.2 – Conditions, Boucles, Fonctions (ATELIER)
 
-```python
+```
 # gestion_vols.py
 
 def peut_decoller(avion_pret: bool, piste_dispo: bool) -> bool:

@@ -12,7 +12,7 @@
 
 ### 📦 Prérequis
 
-```bash
+```
 pip install sqlalchemy pymysql faker
 ```
 
@@ -31,7 +31,7 @@ Tu indiques qu’elle contient :
 
 ### 🧠 Code Complet
 
-```python
+```
 from sqlalchemy import create_engine, Column, String, Integer, Text
 from sqlalchemy.orm import declarative_base, sessionmaker
 from faker import Faker

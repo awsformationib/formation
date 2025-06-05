@@ -19,7 +19,7 @@ aeroport/
 
 ### ✅ `avions.py`
 
-```python
+```
 # avions.py
 
 def creer_avion(code):
@@ -31,7 +31,7 @@ def creer_avion(code):
 
 ### ✅ `vols.py`
 
-```python
+```
 # vols.py
 
 def creer_vol(numero, destination, avion):
@@ -47,7 +47,7 @@ def creer_vol(numero, destination, avion):
 
 ### ✅ `utils.py`
 
-```python
+```
 # utils.py
 
 def afficher_dict(label, dico):
@@ -61,7 +61,7 @@ def afficher_dict(label, dico):
 
 ### ✅ `main.py`
 
-```python
+```
 # main.py
 
 from avions import creer_avion

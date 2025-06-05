@@ -16,7 +16,7 @@ Découvrir `pytest`, un framework de test Python moderne, plus souple et plus ag
 
 ### 🏗 **Rappel : la classe à tester**
 
-```python
+```
 class Calculatrice:
     def addition(self, a, b):
         return a + b
@@ -34,7 +34,7 @@ class Calculatrice:
 
 ### 🛠 **Structure d’un test avec `pytest`**
 
-```python
+```
 import pytest
 from calculatrice import Calculatrice
 
@@ -73,19 +73,19 @@ def test_division_par_zero(calc):
 
 Depuis le terminal, dans le dossier projet :
 
-```bash
+```
 pytest
 ```
 
 Pour voir plus de détails (verbose) :
 
-```bash
+```
 pytest -v
 ```
 
 Pour générer un rapport HTML (avec plugin) :
 
-```bash
+```
 pytest --html=rapport.html
 ```
 
@@ -118,7 +118,7 @@ pytest --html=rapport.html
 
 ### 🔧 **Exemple : paramétriser les tests**
 
-```python
+```
 import pytest
 
 @pytest.mark.parametrize("a,b,expected", [

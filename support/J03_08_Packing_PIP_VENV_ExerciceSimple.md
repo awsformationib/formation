@@ -19,7 +19,7 @@ Mettre en place un environnement Python isolé pour AirOps, installer des dépen
 
 ✅ Dans un nouveau dossier nommé `airops_env_test`, créez un environnement virtuel :
 
-```bash
+```
 python -m venv venv
 ```
 
@@ -27,18 +27,18 @@ python -m venv venv
 
 * Sous Linux/macOS :
 
-  ```bash
+  ```
   source venv/bin/activate
   ```
 * Sous Windows :
 
-  ```bash
+  ```
   venv\\Scripts\\activate
   ```
 
 ✅ Vérifiez que l’environnement actif pointe vers le bon Python :
 
-```bash
+```
 which python
 ```
 
@@ -48,26 +48,26 @@ which python
 
 ✅ Installez les packages suivants avec `pip` :
 
-```bash
+```
 pip install rich requests
 ```
 
 ✅ Vérifiez qu’ils sont bien installés :
 
-```bash
+```
 pip list
 ```
 
 ✅ Utilisez `rich` pour faire un mini-script Python qui affiche un titre coloré :
 
-```python
+```
 from rich import print
 print("[bold magenta]Bienvenue sur AirOps ![/bold magenta]")
 ```
 
 ✅ Testez aussi que `requests` fonctionne en envoyant une requête simple (par exemple, récupérer la page d’accueil de Python) :
 
-```python
+```
 import requests
 response = requests.get("https://www.python.org")
 print("Status code:", response.status_code)
@@ -79,7 +79,7 @@ print("Status code:", response.status_code)
 
 ✅ Générez un fichier `requirements.txt` :
 
-```bash
+```
 pip freeze > requirements.txt
 ```
 
@@ -92,7 +92,7 @@ pip freeze > requirements.txt
 ✅ (Optionnel) Créez un nouveau dossier test et un nouveau `venv`.
 ✅ Utilisez le fichier `requirements.txt` pour réinstaller exactement les mêmes packages :
 
-```bash
+```
 pip install -r requirements.txt
 ```
 

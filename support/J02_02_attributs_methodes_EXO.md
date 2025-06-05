@@ -21,7 +21,7 @@ Voici une **fiche d’exercice libre avec erreurs à corriger**, conçue pour re
 
 ### 🔧 Code à corriger (fichier `avion_bogue.py`)
 
-```python
+```
 # avion_bogue.py
 
 class Avion:

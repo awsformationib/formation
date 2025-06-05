@@ -3,7 +3,7 @@
 
 ## 🧩 Fiche 2.1 – Classe & Instance (ATELIER)
 
-```python
+```
 # avion_objet.py
 
 class Avion:

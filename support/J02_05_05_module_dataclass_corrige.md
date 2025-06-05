@@ -5,7 +5,7 @@
 
 ### ✅ `avion_dataclass.py`
 
-```python
+```
 from dataclasses import dataclass, field
 from uuid import uuid4
 

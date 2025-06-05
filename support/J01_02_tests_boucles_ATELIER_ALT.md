@@ -5,7 +5,7 @@
 
 ### 🧪 Variante : boucle `while` + file d’attente
 
-```python
+```
 # gestion_vols_while.py
 
 def peut_decoller(avion_pret: bool, piste_dispo: bool) -> bool:

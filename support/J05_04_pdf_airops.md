@@ -36,7 +36,7 @@ Créer une application qui :
 
 Installez les librairies nécessaires :
 
-```bash
+```
 pip install PySimpleGUI weasyprint
 ```
 
@@ -48,7 +48,7 @@ pip install PySimpleGUI weasyprint
 
 #### 🛠 Étape 1 : Préparer les données avec des techniques Pythonic
 
-```python
+```
 def vols_par_destination(vols, destination="paris"):
     # Liste en compréhension + filtrage
     return [v for v in vols if v[1].lower() == destination.lower()]
@@ -66,7 +66,7 @@ def vols_formates(vols):
 
 #### 🛠 Étape 2 : Générer le PDF enrichi
 
-```python
+```
 from weasyprint import HTML
 
 def generer_rapport_pdf(vols, fichier_pdf="rapport_vols.pdf"):
@@ -91,7 +91,7 @@ def generer_rapport_pdf(vols, fichier_pdf="rapport_vols.pdf"):
 
 #### 🛠 Étape 3 : Intégrer dans l’interface GUI
 
-```python
+```
 import PySimpleGUI as sg
 
 def afficher_interface(vols):

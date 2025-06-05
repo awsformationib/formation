@@ -47,7 +47,7 @@ Le polymorphisme permet :
 
 ### 🔧 **Illustration en Python**
 
-```python
+```
 class Personnel:
     def presenter(self):
         raise NotImplementedError

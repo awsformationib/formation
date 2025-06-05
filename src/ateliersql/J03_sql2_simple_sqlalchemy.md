@@ -3,7 +3,7 @@
 
 ## 📦 1. Modèle `Vol` avec SQLAlchemy
 
-```python
+```
 from sqlalchemy import Column, String, DateTime
 from sqlalchemy.orm import declarative_base
 
@@ -25,7 +25,7 @@ class Vol(Base):
 
 ## ⚙️ 2. Connexion & Session
 
-```python
+```
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
@@ -40,7 +40,7 @@ SessionLocal = sessionmaker(bind=engine)
 
 ## 🧱 3. Ajouter un vol
 
-```python
+```
 def ajouter_vol(vol: Vol):
     session = SessionLocal()
     try:
@@ -54,7 +54,7 @@ def ajouter_vol(vol: Vol):
 
 ## 📖 4. Lister tous les vols
 
-```python
+```
 def lister_vols():
     session = SessionLocal()
     try:
@@ -67,7 +67,7 @@ def lister_vols():
 
 ## 🔍 5. Chercher un vol par numéro
 
-```python
+```
 def chercher_vol_par_numero(numero: str):
     session = SessionLocal()
     try:
@@ -80,7 +80,7 @@ def chercher_vol_par_numero(numero: str):
 
 ## 🛠️ 6. Mettre à jour le statut d’un vol
 
-```python
+```
 def mettre_a_jour_statut(numero: str, nouveau_statut: str):
     session = SessionLocal()
     try:
@@ -96,7 +96,7 @@ def mettre_a_jour_statut(numero: str, nouveau_statut: str):
 
 ## 🗑️ 7. Supprimer un vol
 
-```python
+```
 def supprimer_vol(numero: str):
     session = SessionLocal()
     try:
@@ -112,7 +112,7 @@ def supprimer_vol(numero: str):
 
 ## 🔎 Bonus : Recherche par destination (LIKE)
 
-```python
+```
 def chercher_par_destination(partiel: str):
     session = SessionLocal()
     try:
@@ -127,6 +127,6 @@ def chercher_par_destination(partiel: str):
 
 À lancer une fois pour créer la table en base (si elle n’existe pas encore) :
 
-```python
+```
 Base.metadata.create_all(bind=engine)
 ```

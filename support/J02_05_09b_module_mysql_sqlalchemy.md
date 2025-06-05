@@ -4,7 +4,7 @@
 
 Installe d’abord SQLAlchemy et le connecteur MySQL :
 
-```bash
+```
 pip install sqlalchemy pymysql
 ```
 

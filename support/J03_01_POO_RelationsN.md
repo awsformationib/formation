@@ -53,7 +53,7 @@ Bien modéliser ces liens permet :
 
 #### Avion et ses vols (1 → n)
 
-```python
+```
 class Avion:
     def __init__(self, immatriculation):
         self.immatriculation = immatriculation
@@ -68,7 +68,7 @@ class Vol:
 
 #### Vol et sa piste (n → 1)
 
-```python
+```
 class Vol:
     def __init__(self, numero, avion, piste):
         self.numero = numero
@@ -78,7 +78,7 @@ class Vol:
 
 #### Pilotes et vols (n ↔ n)
 
-```python
+```
 class Pilote:
     def __init__(self, nom):
         self.nom = nom
