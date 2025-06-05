@@ -2,6 +2,12 @@
 from dataclasses import dataclass
 from typing import Union
 
+class Personnel:
+    pass
+
+class NonNaviguant:
+    pass
+
 
 @dataclass(init=True, repr=True, frozen=True)
 class Pilote:

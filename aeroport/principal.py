@@ -21,7 +21,7 @@ if __name__=="__main__":
     logging.info("Demarrage")
 
     # CAPTATION
-    tous_les_vols = creer_vols_fictifs(49)
+    tous_les_vols = creer_vols_fictifs(50)
 
     # RESTITITUION
     tous_les_vols.sort(key=lambda v1 : -1 * len(v1.destination))
@@ -29,11 +29,6 @@ if __name__=="__main__":
     for v in tous_les_vols:
        print(v)
        print(v.avion)
-
-    a = Avion("XYZ","Cessna")
-    v1 = Vol("I1X214","Paris", a)
-    v2 = Vol("I1X214", "Paris", a)
-
 
     export_to_json("tous_les_vols.json",tous_les_vols )
     export_to_csv("tous_les_vols.csv",tous_les_vols ) #TODO

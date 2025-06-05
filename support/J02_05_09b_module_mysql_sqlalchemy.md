@@ -12,7 +12,7 @@ pip install sqlalchemy pymysql
 
 ### 🧱 Étape 1 : Définir la classe `Avion` comme un modèle ORM
 
-```python
+```
 from sqlalchemy import Column, Integer, String, Boolean
 from sqlalchemy.orm import declarative_base
 
@@ -34,7 +34,7 @@ class Avion(Base):
 
 ### 🧩 Étape 2 : Créer une session SQLAlchemy et se connecter à MySQL
 
-```python
+```
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
@@ -54,7 +54,7 @@ session = Session()
 
 ### ✍️ Étape 3 : Utiliser le modèle pour insérer un avion
 
-```python
+```
 # Création d'un objet Avion
 nouvel_avion = Avion(immatriculation="F-HBXC", modele="Airbus A320", en_vol=True)
 
@@ -69,7 +69,7 @@ print("Avion inséré :", nouvel_avion)
 
 ### 🔍 Étape 4 : Requête simple
 
-```python
+```
 # Rechercher tous les avions en vol
 avions_en_vol = session.query(Avion).filter_by(en_vol=True).all()
 for avion in avions_en_vol:

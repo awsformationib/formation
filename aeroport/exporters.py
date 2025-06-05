@@ -25,6 +25,7 @@ def export_to_csv(basename , list_vols) -> None :
         fullpath = config.PATHEXP / basename # fichier fullname
         with open(fullpath, mode='w', newline='') as csvfile: # newline neutralise ce que fait deja DictWriter
             entete = tuple(list_vols[0].__dict__.keys())
+            print(entete)
             writer = csv.DictWriter(csvfile, fieldnames=entete, delimiter=";", quoting=csv.QUOTE_NONNUMERIC)
             writer.writeheader()
             for v in list_vols:
