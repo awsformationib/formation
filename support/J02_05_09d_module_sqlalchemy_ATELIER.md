@@ -1,9 +1,39 @@
-
 # 🧩 **Fiche d'exercices – SQLAlchemy ORM**
+
+
+Base = declarative_base()
+
+class Avion(Base):
+    __tablename__ = 'avionsorm'
+    id = Column(Integer, primary_key=True)
+    modele = Column(String(50), nullable=False)
+    description = Column(String(100))
+    vitesse_max = Column(Integer)
+
+    vols = relationship("Vol", back_populates="avion")
+
+class Pilote(Base):
+    __tablename__ = 'pilotesorm'
+    id = Column(Integer, primary_key=True)
+    nom = Column(String(50), nullable=False)
+    licence = Column(String(50), unique=True)
+
+    vols = relationship("Vol", back_populates="pilote")
+
+class Vol(Base):
+    __tablename__ = 'volsorm'
+    numero = Column(String(10), primary_key=True)
+    destination = Column(String(50))
+    statut = Column(String(20))
+    heure_creation = Column(DateTime, default=datetime.utcnow)
+    heure_decollage = Column(DateTime)
+    heure_arrivee = Column(DateTime)
+
+
 
 ## 🔧 Contexte
 
-Tu travailles avec trois entités relationnelles :
+On travaille avec trois entités relationnelles :
 
 * `Avion(id, modele, description, vitesse_max)`
 * `Pilote(id, nom, licence)`
