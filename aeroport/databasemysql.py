@@ -1,5 +1,4 @@
 import logging
-
 import mysql.connector
 
 def creer_base(conn):
