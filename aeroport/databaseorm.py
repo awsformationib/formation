@@ -3,7 +3,7 @@ import datetime
 from sqlalchemy import Column, String, DateTime
 from sqlalchemy.orm import declarative_base
 
-# PHASE DESCRIPTIVE
+# PHASE DECLARATIVE
 Base = declarative_base()
 
 class VolORM(Base):
@@ -24,8 +24,16 @@ from sqlalchemy.orm import sessionmaker
 
 # Adapter avec vos identifiants
 DATABASE_URL = "mysql+mysqlconnector://root:@localhost/formation"
-
 engine = create_engine(DATABASE_URL, echo=False)
+
+
+DATABASE_URL_LITE = "sqlite:///formation.db"
+engine = create_engine(DATABASE_URL_LITE, echo=True)
+
+DATABASE_MEM = "sqlite:///:memory:"
+engine = create_engine(DATABASE_MEM, echo=True)
+
+
 Session = sessionmaker(bind=engine)
 
 # 4. Créer la base si elle n'existe pas encore (optionnel)
@@ -36,7 +44,9 @@ session = Session()
 
 auj = datetime.datetime.now()
 v= VolORM()
-v.numero = "XYZZ2"
+v.numero = "XYZZ3"
+v.destination = "Paris CDG"
+v.heure_creation = auj
 
 session.add(v)          # equivalent de insert into...
 session.commit()
