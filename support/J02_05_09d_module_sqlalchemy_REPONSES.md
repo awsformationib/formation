@@ -1,3 +1,6 @@
+![Logo](images\logo.png)
+
+https://docs.sqlalchemy.org/en/20/tutorial/index.html
 
 # 🧩 **Fiche d'exercices – SQLAlchemy ORM**
 

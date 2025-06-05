@@ -1,6 +1,5 @@
 ![Logo](images\logo.png)
 
-
 ## 🧩 Fiche Module Standard #5 – `dataclasses` CORRIGE
 
 ### ✅ `avion_dataclass.py`
