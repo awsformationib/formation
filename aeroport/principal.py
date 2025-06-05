@@ -3,7 +3,8 @@ import logging
 from collections import defaultdict, Counter
 
 import config
-from aeroport.avions import Avion
+import databaselite
+import databasemysql
 from exporters import export_to_json, export_to_csv
 from vols import creer_vols_fictifs, Vol
 
@@ -39,6 +40,33 @@ if __name__=="__main__":
 
     stats = Counter(vol.destination for vol in tous_les_vols)
 
+    cnx = databasemysql.ouvrebase("127.0.0.1")
+    #databasemysql.creer_base(cnx)
+
+    last_vol = tous_les_vols[-1]
+    for v in tous_les_vols:
+        #
+        pass
+        #databasemysql.ecrire_vol(cnx,v)
+
+    print(last_vol)
+    #databaselite.lire_vol(cnx, last_vol.numero)
+    records_lus = databasemysql.lire_vols(cnx)
+    for r in records_lus:
+        print(r)
+
     print(stats)
 
     logging.info("Arret du programme")
+
+
+"""
+def createinsqllite():
+    cnx = databaselite.ouvrebase("formation.db")
+
+    last_vol = tous_les_vols[-1]
+    databaselite.ecrire_vol(cnx,last_vol)
+    print(last_vol)
+    #databaselite.lire_vol(cnx, last_vol.numero)
+    databaselite.lire_vols(cnx)
+"""
