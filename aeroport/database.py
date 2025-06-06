@@ -169,7 +169,6 @@ class VolMySql(SqlGenerique):
         cursor.execute(query)
         self.cnx.commit()
 
-
 class WithPandas(VolMySql):
 
     def lire_vols(self) -> DataFrame:
