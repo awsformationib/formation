@@ -1,9 +1,16 @@
 from abc import ABC, abstractmethod
+import pandas as pd
+
 
 import logging
 import mysql.connector
 import sqlite3
+
+from pandas import DataFrame
+
 import config
+from decorateurs import benchmark
+
 
 class SqlGenerique(ABC):
 
@@ -20,7 +27,6 @@ class SqlGenerique(ABC):
             logging.error("Connexion NON fermee")
 
     @abstractmethod
-
     def ouvrebase(self):
         pass
 
@@ -132,7 +138,7 @@ class VolMySql(SqlGenerique):
 
 
 
-
+    @benchmark
     def lire_vols(self):
         self.ouvrebase()
         cursor = self.cnx.cursor()
@@ -149,3 +155,12 @@ class VolMySql(SqlGenerique):
         query = "INSERT INTO vols VALUES (" + values + ")"
         cursor.execute(query)
         self.cnx.commit()
+
+
+class WithPandas(VolMySql):
+
+    def lire_vols(self) -> DataFrame:
+        self.ouvrebase()
+        query = "SELECT * FROM vols"
+        return pd.read_sql(query, self.cnx)
+

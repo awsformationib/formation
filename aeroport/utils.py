@@ -1,7 +1,8 @@
-import datetime
-import random
 from random import choice
 from string import ascii_uppercase, digits
+
+from avions import Avion
+from vols import Vol
 
 
 def afficher_dict(label, dico:dict):
@@ -30,3 +31,28 @@ VILLES = ("Honolulu","Hong Kong","Marseille","Brisbane","Miami","Nantes")
 def villes_random():
     return choice(VILLES)
 
+
+def creer_vol():
+    avion = Avion(genere_immat())
+
+    # creation vol (qui fait ref a l'avion)
+    nvol = genere_immat(with_digit=True, taille=6)
+    nville = villes_random()
+    return Vol(nvol, nville, avion)
+
+def creer_vols_fictifs(combien=0) -> list:
+    tous_les_vols = []
+    for _ in range(combien):
+        #creation avion
+        avion = Avion( genere_immat() )
+
+        #creation vol (qui fait ref a l'avion)
+        nvol = genere_immat(with_digit=True,taille=6)
+        nville = villes_random()
+        vol = Vol( nvol , nville, avion )
+
+        # mise dans un SET
+        tous_les_vols.append(vol)
+
+
+    return tous_les_vols

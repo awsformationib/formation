@@ -1,5 +1,6 @@
 import math
 import uuid
+from dataclasses import field, dataclass
 
 
 class Vehicule: # generalise Avion
@@ -18,41 +19,32 @@ class Vehicule: # generalise Avion
         else:
             raise ValueError(f"La vitesse donnée est erronnée {v}")
 
-    def deplace(self):
-        pass
+@dataclass(order=True, init=True)
+class Avion(Vehicule):
+    immatriculation: str
+    modele: str
+    en_vol:bool = field(default_factory=lambda: False)
+    id: str = field(default_factory=lambda: str(uuid.uuid4()))
 
-    def __reset(self):
-        pass
-
-    def _softreset(self): #protected
-        pass
-
-    def __str__(self):
-        return f"{self.__class__.__name__} = {self.__vitesse_max}"
-
-    def __lt__(self, other):
-        if isinstance(other, Vehicule):
-            return self.__vitesse_max < other.__vitesse_max
-        elif isinstance(other, (int, float)):
-            return self.__vitesse_max < other
-        return False
-
-
-class Avion(Vehicule): #avion herite de vehicule, le specialise
-    def __init__(self, immatriculation, modele=None, vitesse = 800):
-        super().__init__(vitesse)
-        self.__id = str(uuid.uuid4())
-        self.immatriculation = immatriculation
-        self.__modele = modele
-        self.en_vol = False
+    def __str__(self) -> str:
+        return f"{self.immatriculation} ({self.modele})"
 
     @property
     def id(self):
         return self.__id
 
+    @id.setter
+    def id(self,i):
+        self.__id = i
+
     @property
     def modele(self):
         return self.__modele if self.__modele else "N/A"
+
+    @modele.setter
+    def modele(self, mod):
+        self.__modele = mod
+
 
     # decollage
     def decoller(self):
@@ -61,28 +53,9 @@ class Avion(Vehicule): #avion herite de vehicule, le specialise
     def atterrir(self):
         self.en_vol = False
 
-    """
-    def afficher_infos(self):
-        print(f"I={self.immatriculation}, M={self.modele}")
-    """
-
     # commence par __xxx__ : speciales / dunders (double_underscores)
     def __str__(self):
         return f"I={self.immatriculation}, M={self.__modele}"
-
-    def __lt__(self, other):
-        if isinstance(other, Avion):
-            if self.immatriculation == other.immatriculation:
-                return super().__lt__(other.__vitesse_max)
-            return self.immatriculation < other.immatriculation
-        elif isinstance(other,str):
-            return self.immatriculation < other
-        return False
-
-"""
-def creer_avion(code) -> Avion:    
-    return Avion(code, None)
-"""
 
 
 class GrosPorteur(Avion):
@@ -100,7 +73,7 @@ class GrosPorteur(Avion):
 
     #dunders
     def __str__(self):
-        return f"I={self.immatriculation}, M={self.__modele}, T={self.tonnage}"
+        return f"I={self.immatriculation}, M={self.modele}, T={self.tonnage}"
 
 if __name__ == "__main__":
     # code de tests

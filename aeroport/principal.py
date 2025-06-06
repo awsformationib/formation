@@ -1,19 +1,22 @@
-import json
 import logging
 from collections import defaultdict, Counter
 
+import pandas as pd
+
 import config
-from database import VolMySql
+from database import VolMySql, WithPandas
+
 from exporters import export_to_json, export_to_csv
-from vols import creer_vols_fictifs, Vol
+from utils import creer_vols_fictifs
+
 
 # IF : le code en dessus ne s'execute que si ce code est le
 # script d'entre aka script principal
 #  n'execute pas si principal.py est utiliser par un autre fichier avec
 #  'import principal'
 
-if __name__=="__main__":
 
+def main():
     config.init()
 
     logging.basicConfig(filename=config.PATHLOG / "exporters.log", encoding="utf-8", level=config.LEVEL)
@@ -21,15 +24,15 @@ if __name__=="__main__":
     logging.info("Demarrage")
 
     # CAPTATION
+    logging.debug("Creation Vols fictifs")
     tous_les_vols = creer_vols_fictifs(50)
 
-    # RESTITITUION
+    # RESTITITUION ECRAN
     tous_les_vols.sort(key=lambda v1 : -1 * len(v1.destination))
-
     for v in tous_les_vols:
        print(v)
-       print(v.avion)
 
+    # RESTITITUION FICHIERS
     export_to_json("tous_les_vols.json",tous_les_vols )
     export_to_csv("tous_les_vols.csv",tous_les_vols ) #TODO
 
@@ -37,32 +40,22 @@ if __name__=="__main__":
     for vol in tous_les_vols:
         vols_par_destination[vol.destination].append(vol)
 
-    stats = Counter(vol.destination for vol in tous_les_vols)
-    print(stats)
-
-# ------------------------
+    # VERS DATABASE (sqllite si pas possible)
     db = VolMySql(host="127.0.0.1", login="root", password="", database="formation")
     #db.creer_base(cnx)
 
-
-    last_vol = tous_les_vols[-1]
+    logging.debug("Ecriture base")
     for v in tous_les_vols:
         db.ecrire_vol(v)
 
+    logging.debug("Lecture base")
+    # ON LIT A NOUVEAU DANS LA BASE
     records_lus = db.lire_vols()
     for r in records_lus:
         print(r)
 
+
     logging.info("Arret du programme")
 
-
-"""
-def createinsqllite():
-    cnx = databaselite.ouvrebase("formation.db")
-
-    last_vol = tous_les_vols[-1]
-    databaselite.ecrire_vol(cnx,last_vol)
-    print(last_vol)
-    #databaselite.lire_vol(cnx, last_vol.numero)
-    databaselite.lire_vols(cnx)
-"""
+if __name__=="__main__":
+    main()

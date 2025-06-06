@@ -157,3 +157,7 @@ vols_complets = session.query(Vol).options(
     joinedload(Vol.avion)
 ).all()
 ```
+
+
+DOC https://docs.sqlalchemy.org/en/20/tutorial/index.html
+ 

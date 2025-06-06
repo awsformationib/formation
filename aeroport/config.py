@@ -2,6 +2,9 @@ import argparse
 import logging
 import pathlib
 import os
+import time
+
+from decorateurs import benchmark
 
 PATHLOG = pathlib.Path("../logs")
 PATHEXP = pathlib.Path("../exports")
@@ -34,4 +37,6 @@ def init():
 
     if not PATHEXP.is_dir():
         os.mkdir(PATHEXP)
+
+    time.sleep(2)
 

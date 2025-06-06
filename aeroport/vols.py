@@ -1,8 +1,6 @@
 from datetime import datetime
-from typing import List, Optional
 
 from aeroport.avions import Avion
-from aeroport.utils import genere_immat, villes_random
 
 from enum import Enum
 
@@ -17,9 +15,18 @@ class Vol:
         self.destination = dest
         self.avion = av
         self.statut = StatutVol.PREVU
-        self.heure_creation = datetime.now()
+        self._heure_creation = datetime.now()
         self.heure_decollage = None
         self.heure_arrivee = None
+
+    @property
+    def heure_creation(self):
+        if not self._heure_creation: return ""
+        return self._heure_creation
+
+    @heure_creation.setter
+    def heure_creation(self, d):
+        self._heure_creation = d
 
     def duree_de_vol(self):
         if self.heure_decollage and self.heure_arrivee:
@@ -52,30 +59,4 @@ class Vol:
         return self.destination == autre_vol.destination and self.numero == autre_vol.numero
 
 
-def creer_vol():
-    avion = Avion(genere_immat())
 
-    # creation vol (qui fait ref a l'avion)
-    nvol = genere_immat(with_digit=True, taille=6)
-    nville = villes_random()
-    return Vol(nvol, nville, avion)
-
-def creer_vols_fictifs(combien=0) -> list:
-    tous_les_vols = []
-    for _ in range(combien):
-        #creation avion
-        avion = Avion( genere_immat() )
-
-        #creation vol (qui fait ref a l'avion)
-        nvol = genere_immat(with_digit=True,taille=6)
-        nville = villes_random()
-        vol = Vol( nvol , nville, avion )
-
-        # mise dans un SET
-        tous_les_vols.append(vol)
-
-
-    return tous_les_vols
-
-if __name__=="__main__":
-    v = creer_vol()

@@ -28,7 +28,7 @@ def generer_vol():
 vols = [generer_vol() for _ in range(10)]
 
 # Export CSV avec pathlib
-dossier = Path("exports")
+dossier = Path("../exports")
 dossier.mkdir(exist_ok=True)
 
 chemin_csv = dossier / "vols_jour.csv"
