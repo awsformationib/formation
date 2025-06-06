@@ -19,7 +19,8 @@ from utils import creer_vols_fictifs
 def main():
     config.init()
 
-    logging.basicConfig(filename=config.PATHLOG / "exporters.log", encoding="utf-8", level=config.LEVEL)
+    logging.basicConfig(filename=config.PATHLOG / "exporters.log", encoding="utf-8", level=config.LEVEL
+                        ,format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 
     logging.info("Demarrage")
 
@@ -42,17 +43,20 @@ def main():
 
     # VERS DATABASE (sqllite si pas possible)
     db = VolMySql(host="127.0.0.1", login="root", password="", database="formation")
-    #db.creer_base(cnx)
 
-    logging.debug("Ecriture base")
-    for v in tous_les_vols:
-        db.ecrire_vol(v)
+    #db.creer_base(cnx)
+    if config.CREATE:
+        logging.debug("Ecriture base")
+        for v in tous_les_vols:
+            db.ecrire_vol(v)
 
     logging.debug("Lecture base")
     # ON LIT A NOUVEAU DANS LA BASE
     records_lus = db.lire_vols()
     for r in records_lus:
         print(r)
+
+    print(f"Total {len(records_lus)}")
 
 
     logging.info("Arret du programme")

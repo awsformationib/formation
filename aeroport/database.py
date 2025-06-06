@@ -77,6 +77,7 @@ class VolSqlLite(SqlGenerique):
         fullpath = config.PATHEXP / self.params["chemin"]
         self.cnx = sqlite3.connect(fullpath)
 
+    # TODO acces par RESTAPI http://localhost:5000/vol/JG54 GET
     def lire_vol(self,cnx, numero):
         cursor = cnx.cursor()
         # Création de la table conforme à ta structure
@@ -85,6 +86,7 @@ class VolSqlLite(SqlGenerique):
         return result.fetchone()
 
 
+    # TODO acces par RESTAPI http://localhost:5000/vols GET
     def lire_vols(self,cnx):
         cursor = cnx.cursor()
         # Création de la table conforme à ta structure
@@ -92,6 +94,7 @@ class VolSqlLite(SqlGenerique):
         result = cursor.execute(query)
         return result.fetchall()
 
+    # TODO acces par RESTAPI http://localhost:5000/vol POST {"immatriculation"...}
     def ecrire_vol(self,cnx, obj):
         cursor = cnx.cursor()
         # Création de la table conforme à ta structure
@@ -137,6 +140,16 @@ class VolMySql(SqlGenerique):
             logging.error(ex)
 
 
+    def lire_vol(self, numero):
+        try:
+            self.ouvrebase()
+            cursor = self.cnx.cursor()
+            # Création de la table conforme à ta structure
+            query = f"SELECT * FROM vols where numero='{numero}'"
+            cursor.execute(query)
+            return cursor.fetchone()
+        except:
+         raise ValueError()
 
     @benchmark
     def lire_vols(self):

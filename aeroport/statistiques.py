@@ -1,3 +1,5 @@
+import pandas as pd
+
 from database import WithPandas
 
 if __name__ == "__main__":
