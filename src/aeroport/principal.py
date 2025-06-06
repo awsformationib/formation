@@ -1,10 +1,8 @@
 import logging
-from collections import defaultdict, Counter
-
-import pandas as pd
+from collections import defaultdict
 
 import config
-from database import VolMySql, WithPandas
+from database import VolMySql
 
 from exporters import export_to_json, export_to_csv
 from utils import creer_vols_fictifs
@@ -20,7 +18,7 @@ def main():
     config.init()
 
     logging.basicConfig(filename=config.PATHLOG / "exporters.log", encoding="utf-8", level=config.LEVEL
-                        ,format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+                        , format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 
     logging.info("Demarrage")
 

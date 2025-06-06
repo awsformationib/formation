@@ -1,9 +1,5 @@
 ![Logo](images\logo.png)
 
-Parfait ! Voici la **fiche 4.1 dédiée à `pip`, `venv` et la gestion des dépendances Python**, pensée comme une introduction pratique pour tes participants, intégrable dans le bloc **Modules, Packages et Frameworks Externes**.
-
----
-
 ## 🧩 Fiche 4.1 – `pip`, `venv` et gestion des dépendances Python
 
 ---

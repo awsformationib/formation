@@ -1,4 +1,4 @@
-from aeroport.avions import Vehicule, Avion
+from avions import Vehicule, Avion
 
 entiers = [5,8,-1,77,99,0]
 

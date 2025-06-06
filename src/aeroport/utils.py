@@ -12,7 +12,7 @@ def afficher_dict(label, dico:dict):
         print(" - {} : {}".format(cle,valeur))
 
 
-def genere_immat(taille=4,with_digit = False) -> str:
+def genere_immat(taille=6,with_digit = False) -> str:
     chaine = ascii_uppercase
     chaine += digits if with_digit else ""
     lcode = [ choice(chaine) for _ in range(taille) ]

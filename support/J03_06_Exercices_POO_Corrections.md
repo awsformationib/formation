@@ -1,8 +1,6 @@
 ![Logo](images\logo.png)
 
 
----
-
 ### 🛠 ## ✈️ Mini-exercice fil rouge : Des piliers POO dans AirOps
 
 On part d’un projet AirOps simplifié, et à chaque étape, on **ajoute un pilier** pour enrichir la conception.

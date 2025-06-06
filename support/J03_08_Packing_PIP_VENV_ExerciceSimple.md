@@ -1,6 +1,5 @@
 ![Logo](images\logo.png)
 
-
 ## 🛠 Mini-exercice pratique – Manipuler `pip`, `venv` et les dépendances
 
 ---

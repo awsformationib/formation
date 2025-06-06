@@ -6,8 +6,8 @@ import time
 
 from decorateurs import benchmark
 
-PATHLOG = pathlib.Path("../logs")
-PATHEXP = pathlib.Path("../exports")
+PATHLOG = pathlib.Path("../../logs")
+PATHEXP = pathlib.Path("../../exports")
 LEVEL = logging.WARNING
 CREATE = False
 

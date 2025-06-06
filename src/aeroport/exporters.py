@@ -1,8 +1,8 @@
 import logging
-import os
-import pathlib
 import json
 import csv
+
+from rich.progress import Progress
 
 import config
 from encoders import VolEncoder
@@ -28,11 +28,17 @@ def export_to_csv(basename , list_vols) -> None :
             print(entete)
             writer = csv.DictWriter(csvfile, fieldnames=entete, delimiter=";", quoting=csv.QUOTE_NONNUMERIC)
             writer.writeheader()
-            for v in list_vols:
-                row:dict = v.__dict__
-                row["avion"] = row["avion"].immatriculation
-                row["statut"] = row["statut"].value
-                writer.writerow(row)
+
+            # utilise rich.Progress
+            with Progress() as progress:
+                task = progress.add_task("[cyan]Génération du CSV...", total=len(list_vols))
+                for i,v in enumerate(list_vols):
+                    row:dict = v.__dict__
+                    row["avion"] = row["avion"].immatriculation
+                    row["statut"] = row["statut"].value
+                    writer.writerow(row)
+                    progress.update(task, advance=1)
+
             logging.debug(f"Export file {fullpath} OK")
     except Exception as ex:
         logging.error(f"Erreur durant export de {fullpath} : {ex}")

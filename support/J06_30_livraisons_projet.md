@@ -37,7 +37,7 @@ name = "monprojet"
 version = "0.1.0"
 description = "Mon outil de vol"
 authors = [{name = "Denis"}]
-dependencies = ["pandas", "flask"]
+dependencies = ["pandas", "numpy"]
 
 [project.scripts]
 monprojet-cli = "monprojet.cli:main"

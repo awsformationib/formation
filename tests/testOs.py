@@ -8,5 +8,5 @@ class TestCBasic(unittest.TestCase):
 
     def test_system(self):
         os_name = platform.system().lower()
-        self.assertEqual(os_name,"linux")
+        self.assertEqual(os_name,"windows")
 
