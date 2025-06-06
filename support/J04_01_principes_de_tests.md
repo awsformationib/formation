@@ -1,8 +1,5 @@
 ![Logo](images\logo.png)
 
-
----
-
 ## 🧩 Fiche – Qualité logicielle et rôle des tests
 
 ---

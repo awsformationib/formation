@@ -1,6 +1,5 @@
 ![Logo](images\logo.png)
 
-
 ## 🧩 Fiche – Comment utiliser `unittest` en Python
 
 ---
